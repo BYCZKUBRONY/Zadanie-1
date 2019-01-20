@@ -25,4 +25,5 @@ class PythonSTXNextWebsite(unittest.TestCase):
         assert "STX Next" in self.browser.page_source
 
 
-if __name__ == "__main__": unittest.main()
+if __name__ == "__main__":
+    unittest.main()
