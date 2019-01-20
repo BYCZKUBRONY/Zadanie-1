@@ -1,12 +1,10 @@
 import unittest
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
 
 
-class PythonOrgSearch(unittest.TestCase):
+class PythonSTXNextWebsite(unittest.TestCase):
 
-    def tearUp(self):
+    def setUp(self):
         self.browser = webdriver.Firefox()
 
     def tearDown(self):
@@ -22,11 +20,9 @@ class PythonOrgSearch(unittest.TestCase):
         firstscore = self.browser.find_element_by_class_name("result__a")
         firstscore.click()
 
-    def test_test(self):
-        self.tearUp()
+    def test_STX_Next(self):
         self.open_website()
         assert "STX Next" in self.browser.page_source
-        self.tearDown()
 
 
 if __name__ == "__main__": unittest.main()
