@@ -6,10 +6,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class PythonOrgSearch(unittest.TestCase):
 
-    def browser_settings(self):
+    def tearUp(self):
         self.browser = webdriver.Firefox()
 
-    def tear_down(self):
+    def tearDown(self):
         self.browser.close()
 
     def open_website(self):
@@ -23,10 +23,10 @@ class PythonOrgSearch(unittest.TestCase):
         firstscore.click()
 
     def test_test(self):
-        self.browser_settings()
+        self.tearUp()
         self.open_website()
         assert "STX Next" in self.browser.page_source
-        self.tear_down()
+        self.tearDown()
 
 
 if __name__ == "__main__": unittest.main()
