@@ -1,2 +1,2 @@
 # Zadanie-1
-First test in selenium python
+First automatic test using unittest library in python selenium.
